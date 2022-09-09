@@ -1,0 +1,16 @@
+
+/*registers*/
+#define RCC_REG     ((uint32_t *)0x40023800)
+#define GPIOA       ((uint32_t *)0x40020000)
+#define GPIOB       ((uint32_t *)0x40020400)
+#define EXTI        ((uint32_t *)0x40013C00)
+
+/*offsets*/
+#define RCC_AHB1ENR 0x30
+//#define 
+
+/*values*/
+#define GPIOAEN         1
+#define GPIOBEN         (1 >> 1)
+#define GPIOA_RESET_VAL 0x0C000000
+#define GPIOB_RESET_VAL 0x00000280

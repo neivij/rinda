@@ -1,0 +1,18 @@
+#include <stdint.h>
+#include<stdio.h>
+#include "main.h"
+
+/*does not clear the register*/
+void SetRegister(uint32_t* reg, uint32_t* offset, uint32_t value){
+    reg = (uint32_t*)((uint32_t)reg + (uint32_t) offset);
+    *reg |= value;
+    //printf("%x", *reg);
+}
+
+int main(){
+
+    /*enable RCC for GPIO A and B*/
+    SetRegister(RCC_REG, RCC_AHB1ENR, GPIOAEN);
+    SetRegister(RCC_REG, RCC_AHB1ENR, GPIOBEN);
+
+}
