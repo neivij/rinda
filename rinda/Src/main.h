@@ -1,11 +1,5 @@
 /*delay*/
-#define MS   1000000        //needs estimation
-/*registers*/
-#define RCC_REG ((uint32_t *)0x40023800)
-#define GPIOA   ((uint32_t *)0x40020000)
-#define GPIOB   ((uint32_t *)0x40020400)
-#define EXTI    ((uint32_t *)0x40013C00)
-#define SYSCFG  ((uint32_t *)0x40013800)
+#define MS   100000        //around 1.1 ms at84MHZ
 
 /*offsets*/
 #define RCC_AHB1ENR     0x30
@@ -43,6 +37,3 @@
 #define GPIO_PIN_5 (1 << 5)
 #define GPIO_PIN_6 (1 << 6)
 #define GPIO_PIN_7 (1 << 7)
-
-#define GPIOA_RESET_VAL 0x0C000000  //neeeded?
-#define GPIOB_RESET_VAL 0x00000280  
